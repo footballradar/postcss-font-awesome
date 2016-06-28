@@ -39,21 +39,21 @@ module.exports = postcss.plugin('postcss-font-awesome', function (opts) {
             if (opts.replacement) {
                 // Add core properties that are normally on the fa- class
                 // https://github.com/FortAwesome/Font-Awesome/blob/master/scss/_core.scss#L5-L10
-                decl.cloneAfter({ prop: 'display', value: 'inline-block' });
-                decl.cloneAfter({
-                    prop: 'font',
-                    value: 'normal normal normal FontAwesome'
-                });
-                decl.cloneAfter({ prop: 'font-size', value: 'inherit' });
-                decl.cloneAfter({ prop: 'text-rendering', value: 'auto' });
-                decl.cloneAfter({
-                    prop: '-webkit-font-smoothing',
-                    value: 'antialiased'
-                });
                 decl.cloneAfter({
                     prop: '-moz-osx-font-smoothing',
                     value: 'grayscale'
                 });
+                decl.cloneAfter({
+                    prop: '-webkit-font-smoothing',
+                    value: 'antialiased'
+                });
+                decl.cloneAfter({ prop: 'text-rendering', value: 'auto' });
+                decl.cloneAfter({ prop: 'font-size', value: 'inherit' });
+                decl.cloneAfter({
+                    prop: 'font',
+                    value: 'normal normal normal medium FontAwesome'
+                });
+                decl.cloneAfter({ prop: 'display', value: 'inline-block' });
 
                 // Since we want the whole font awesome styles involved we need
                 // to put the unicode on a pseudo instead of the selector

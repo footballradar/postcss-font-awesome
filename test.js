@@ -23,7 +23,7 @@ test('options', t => {
     return run(
         t,
         'a{ font-awesome: camera }',
-        'a{ -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; text-rendering: auto; font-size: inherit; font: normal normal normal FontAwesome; display: inline-block }\na::before{ content: \'\\f030\' }', { // eslint-disable-line max-len
+        'a{ display: inline-block; font: normal normal normal medium FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale }\na::before{ content: \'\\f030\' }', { // eslint-disable-line max-len
             replacement: true
         }
     );
@@ -33,7 +33,7 @@ test('options with comma seperated selectors', t => {
     return run(
         t,
         'a, b{ font-awesome: camera }',
-        'a, b{ -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; text-rendering: auto; font-size: inherit; font: normal normal normal FontAwesome; display: inline-block }\na::before, b::before{ content: \'\\f030\' }', { // eslint-disable-line max-len
+        'a, b{ display: inline-block; font: normal normal normal medium FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale }\na::before, b::before{ content: \'\\f030\' }', { // eslint-disable-line max-len
             replacement: true
         }
     );
